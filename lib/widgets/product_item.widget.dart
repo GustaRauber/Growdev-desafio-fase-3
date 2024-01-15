@@ -47,6 +47,7 @@ class ProductItem extends StatelessWidget {
                 child: Container(
                   color: Colors.grey[300],
                   height: 200,
+                  key: const Key("productImage"),
                   child: Image.asset("assets/iphone.png"),
                 ),
               ),
@@ -136,6 +137,7 @@ class ProductItem extends StatelessWidget {
                         onTap: () => addProductInCart(context),
                         child: const Text(
                           "Add Carrinho",
+                          key: Key("addProductToCart"),
                           style: TextStyle(
                             color: Colors.blue,
                             decoration: TextDecoration.underline,

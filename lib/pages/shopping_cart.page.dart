@@ -10,15 +10,22 @@ class ShoppingCartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(
+          key: const Key("btnvoltar"),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
                 title: const Text("Carrinho de compras"),
       ),
       body: cartStore.productsInCart.isEmpty
           ? Center(
-              child: Image.asset("assets/empty_cart.png",
-              height: 200,),
+              child: Image.asset(
+                key : const Key("imagecart"),
+                "assets/empty_cart.png",
+                height: 200,
+              ),
             )
           : ListView.builder(
-            itemCount: cartStore.productsInCart.length,
+              itemCount: cartStore.productsInCart.length,
               itemBuilder: (ctx, index) {
                 final product = cartStore.productsInCart[index];
                 return Text(

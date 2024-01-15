@@ -11,6 +11,7 @@ class AppBarContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const Key("inputSearch");
     return const Column(
       children: [
         Row(

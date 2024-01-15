@@ -7,8 +7,8 @@ class AddressSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: const [
+    return const Row(
+      children: [
         Icon(
           Icons.pin_drop_outlined,
           size: 18,
